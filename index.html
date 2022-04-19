@@ -16,35 +16,36 @@
             <!-- Full Name -->
             <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Full Name">
+                <input type="text" id="name" placeholder="Full Name" name="name"  required minlength="3" maxlength="100">  <!--required is a syntax that shows that the field is important without filling out this field you cannot submit..-->
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="555-555-5555">
+                <input type="tel" id="phone" placeholder="555-555-5555" name="phone" required pattern="[0-9]{10}">  
+                <!-- pattern can be used where you want the customer to enter the exact details given-->
             </div>
 
             <!-- Email Address -->
             <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="Full email@address.com">
+                <input type="email" id="email" placeholder="Full email@address.com" name="email" required>
             </div>
 
             <!-- Website URL -->
             <div class="form-group">
                 <label for="website">Website URL</label>
-                <input type="url" id="website" placeholder="hhtp://aayushm017.design">
+                <input type="url" id="website" placeholder="hhtp://aayushm017.design" name="website" required>
             </div>
 
             <!-- Password -->
             <div class="form-group">
                 <label for="password1">Password</label>
-                <input type="password" id="password1" placeholder="Create Password">
+                <input type="password" id="password1" placeholder="Create Password (Min.8 Charecters)$" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}" title="Please include one uppercase charecter, 1 lowercase charecter, and 1 number">  <!--title is used here becoz the password we typed seems to be too weak, the message should be displayed..-->
             </div>
 
             <!-- Confirm Password -->
             <div class="form-group">
                 <label for="password2">Confirm Password</label>
-                <input type="password" id="password2" placeholder="Confirm Password">
+                <input type="password" id="password2" placeholder="Confirm Password" name="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
             </div>
 
             <button type="submit">Register</button>
